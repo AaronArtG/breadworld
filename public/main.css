@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(48, 177, 143);
+    background-color: rgba(154, 32, 160, 0.355);
   }
   
   img {
@@ -7,5 +7,7 @@ body {
     display: block;
     margin: auto;
   }
-  
+  *{
+    text-align: center;
+  }
   
