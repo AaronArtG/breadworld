@@ -1,10 +1,10 @@
-const React = require('react')
-const Default = require('./layout/default')
+const React = require("react");
+const Default = require("./layout/default");
 
-function Show ({bread, id}) {
-  console.log(bread.name)
-    return (
-      <Default>
+function Show({ bread, index }) {
+  console.log(bread.name);
+  return (
+    <Default>
       <h3>{bread.name}</h3>
       <p>
         and it
@@ -12,15 +12,19 @@ function Show ({bread, id}) {
         have gluten.
       </p>
       <img src={bread.image} alt={bread.name} />
+      <p>{bread.getBakedBy()}</p>
       <li>
         <a href="/breads">Go home</a>
       </li>
       <form action={`/breads/${bread.id}?_method=DELETE`} method="POST">
-        <input type='submit' value="DELETE"/>
+        <input type="submit" value="DELETE" />
       </form>
-      <br/> <a href={`/breads/${bread.id}/edit`}><button>Edit</button></a>
+      <br />{" "}
+      <a href={`/breads/${bread.id}/edit`}>
+        <button>Edit</button>
+      </a>
     </Default>
-    )
+  );
 }
 
-module.exports = Show
+module.exports = Show;
